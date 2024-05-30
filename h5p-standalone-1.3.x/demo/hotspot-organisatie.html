@@ -11,23 +11,7 @@
           frameJs: '../dist/js/h5p-standalone-frame.min.js',
           frameCss: '../dist/styles/h5p.css',
           h5pContent: '../workspace/hotspot-organisatie' <!-- Name of specific H5P content folder goes here -->
-            displayOptions: { // OPTIONAL hide the frame or download, export etc. buttons they are visible by default
-                frame: false,
-                copyright: false,
-                embed: false,
-                download: false,
-                icon: false,
-                export: false
-            }
         });
-          $(window).resize(function(){
-              let height = window.innerHeight;
-              $('.h5p-container').css('max-width', height*1.7777+'px');
-          });
-
-          $('iframe').load(function(){
-              $(window).trigger('resize');
-          })
       });
     })(H5P.jQuery);
   </script>
