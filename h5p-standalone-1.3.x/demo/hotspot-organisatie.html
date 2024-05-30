@@ -20,6 +20,14 @@
                 export: false
             }
         });
+          $(window).resize(function(){
+              let height = window.innerHeight;
+              $('.h5p-container').css('max-width', height*1.7777+'px');
+          });
+
+          $('iframe').load(function(){
+              $(window).trigger('resize');
+          })
       });
     })(H5P.jQuery);
   </script>
